@@ -1,0 +1,166 @@
+endereço contrato: 0x6B64CC2a68217093814Cf243078e69BfCf8c2641
+
+ABI:
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "certificateHash",
+				"type": "bytes32"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "studentName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "courseName",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "issueDate",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "institutionAddress",
+				"type": "address"
+			}
+		],
+		"name": "CertificateRegistered",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "_studentName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "_courseName",
+				"type": "string"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "_certificateHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "registerCertificate",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "",
+				"type": "bytes32"
+			}
+		],
+		"name": "certificates",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "studentName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "courseName",
+				"type": "string"
+			},
+			{
+				"internalType": "bytes32",
+				"name": "certificateHash",
+				"type": "bytes32"
+			},
+			{
+				"internalType": "uint256",
+				"name": "issueDate",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "institutionAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "exists",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes32",
+				"name": "_certificateHash",
+				"type": "bytes32"
+			}
+		],
+		"name": "verifyCertificate",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "studentName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "courseName",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "issueDate",
+				"type": "uint256"
+			},
+			{
+				"internalType": "address",
+				"name": "institutionAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "found",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	}
+]
